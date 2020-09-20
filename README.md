@@ -14,6 +14,10 @@ configuration file
 custom print , which has logging
 XX auto suggestion
 
+
+minimal 3rd party tools allowed
+
+
 about
 doctor
 help
