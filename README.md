@@ -20,6 +20,20 @@ help
 logs
 version
 
+
+
+@TODO \n
+figure out the interfaces entry \ n
+clean, comment, refactor \n
+fix doctor \n
+log search \n
+unit test \n
+configs with env paths \n
+setup script \n
+about page \n
+
+
+
 bonus
 ===================================
 visual interface command line
@@ -28,5 +42,3 @@ watchdog process
 
 
 
-@TODO 
-figure out the interface? kind of weird
