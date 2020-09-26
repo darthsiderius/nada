@@ -1,4 +1,22 @@
-IN DEVELOPMENT
+=====IN DEVELOPMENT=======
+
+
+OVERVIEW:
+
+Goal is to create a general command line framework that allows a development teams
+to stand up a custom command line tool within minutes. Once it is stood up, 
+all team members can create and publish new 'plugins/commands' to the tool as fast as possible, while
+allowing many features / extensability if they want to create more custom/complex plugins.
+
+Examples of possible plugins could include custom builders, server management, backing up folders, applying updates 
+to machine, code gen team templates, automation of team env setup,?? .
+
+General Design Strategy: 
+
+Customizs the 'click' package to take advantage of 'groups, commands and arg parsing'. 
+We override its implementation and create new layer around click for a higher level tool.
+
+
 
 
 
@@ -39,11 +57,31 @@ RECOMMENDED DEV SETUP:
             nada pantry:update
 
             
-        
+EASILY CREATE NEW COMMAND/PLUGIN:
+    Note: this template generation will be automated when the other commands are finished, so itll be even quicker.
+
+    1) Copy and paste an existing plugin folder, such as 'pantry'.
+    2) Determine name of your command
+    3) Change the plugins folder and pantry.py to be the name of your command ( this is going to change when we have packaged plugins)
+    4) Change the name in file
+    5) Test new command 'nada <nameofplugin>:<subcommand>
+
+
+
+    HOW IT HOOKS UP TO FRAMEWORK:
     
+    1) The folder name needs to be the name of the command.
+    2) In your __plugin__.py file ( which resides in top level directory of plugin ) , it defines a entry point callback to your program, set this to your entry point.
+       The framework will find the match the request to plugin folder, look at the __plugin__ file for the entry point callback and 
+       then forward all data to it.
 
+            -- because we are using click , its usually a 'group' , but it can be a command type for similar plugins.
 
+    
+    REFERENCES:
 
+        How to use click quickstart: https://click.palletsprojects.com/en/7.x/quickstart/
+        Click commands and groups:   https://click.palletsprojects.com/en/7.x/commands/ 
 
 TODO/NOTES
 
