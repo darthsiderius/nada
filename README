@@ -60,6 +60,9 @@ RECOMMENDED DEV SETUP:
 EASILY CREATE NEW COMMAND/PLUGIN:
     Note: this template generation will be automated when the other commands are finished, so itll be even quicker.
 
+    One of the main bonuses of this is that it requires minimal effort for plugin integration / setup. It uses dynamic
+    loading / discovery and dispatching.
+
     1) Copy and paste an existing plugin folder, such as 'pantry'.
     2) Determine name of your command
     3) Change the plugins folder and pantry.py to be the name of your command ( this is going to change when we have packaged plugins)
