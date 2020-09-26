@@ -1,0 +1,62 @@
+IN DEVELOPMENT
+
+
+
+RECOMMENDED DEV SETUP:
+    python version = 3.7
+    0) clone repo and navigate to project base directory 'https://github.com/darthsiderius/nada.git'
+    1) for development purposes -> create virtual env 'virtualenv venv --python=/usr/bin/python3.7'
+    2) activate virtual environment -> 'source venv/bin/activate'
+                    It should be preinstalled with python version
+                    The tool will only work if virtual env is activated. 
+                    Make sure to activate it each time before working. To deactivate it: 'deactivate'.
+                    https://docs.python-guide.org/dev/virtualenvs/
+    3) install project -> python -m pip install . -e 
+                    This will install all dependencies and create the command line tool.
+
+    4) invoke 'nada about' from command line
+
+
+    AVAILABLE PLUGINS: ( still in development / most are placeholders ):
+            nada logs:list
+            nada logs:show
+            nada logs:search " XX "
+            nada logs:clean
+
+            nada about
+            nada about:<any base command>   ex: nada about:logs  , nada about:help , nada about:market , nada about:pantry
+
+            nada help
+            nada market:search
+            nada market:browse
+            nada market:install
+            nada market:publish
+
+            # need to change this name
+            nada pantry:list
+            nada pantry:trash
+            nada pantry:create
+            nada pantry:update
+
+            
+        
+    
+
+
+
+
+TODO/NOTES
+
+    @TODO use PYPY instead of normal python
+
+    Abstract logging interface to add different types of loggers
+
+    How do we create adatpers for plugins that were based on a different interface?
+
+    create config file for project
+        -- add required plugins to config
+
+
+    create script to customize the tool default names
+
+    add market:help and help:market, need default command decorators
